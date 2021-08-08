@@ -1,4 +1,7 @@
 My Own Real Sketch (MORSke)
 
+Version 0.02
+Learned to use a for loop. This way, every character of a message can be translated. Next version will try to learn how to use functions!
+
 Version 0.01
 To this point I've just bought an Elegoo Arduino board. I'm learning the basics! I used this sketch to learn how to declare, define and print variables, which will be useful when actually translating every character in a message to morse code.
