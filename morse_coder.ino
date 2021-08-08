@@ -7,23 +7,33 @@ This will be used when:
 By PmXa (31-may-2020)
 */
 
-char message[] = "Hola, mundo!";
+#include "vowelTranslate.h"
+
+int led = 13;
+char message[] = "Hola, mundo! Como estas hoy? Sonrie!";
 int numel;
+int is_vowel;
 
 void setup(){
+    pinMode(led,OUTPUT);
     Serial.begin(9600);
     numel = sizeof(message);
     numel = numel/sizeof(message[0]);
-    
-    for (int x = 0; x < numel; x++){
-        Serial.println(message[x]);
-        // Waits for the data to be sent before sending more
-        // Not needed right now
-        // Serial.flush();
-        delay(500);
-    }
 }
 
 void loop(){
-    // Empty, but just for now!
+    for(int i = 0; i < numel; i++){
+        Serial.println(message[i]);
+        Serial.print("Morse: ");
+        is_vowel = vowelTranslate(message[i]);
+        Serial.println(is_vowel);
+
+        if(is_vowel){
+            digitalWrite(led, HIGH);
+        } else{
+            digitalWrite(led,LOW);
+        }
+
+        delay(500);
+    }
 }
