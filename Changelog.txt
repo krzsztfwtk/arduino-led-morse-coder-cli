@@ -1,5 +1,8 @@
 My Own Real Sketch (MORSke)
 
+Version 0.06
+Added a string concatenation so that a blank space isn't needed at the end of the message anymore. Also, the output speed was increased!
+
 Version 0.05
 Included a character array. This eliminates the need of calculating the message's length and allows to use capital letters as the message is converted to lowercase!
 

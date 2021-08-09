@@ -1,10 +1,10 @@
 //-----------------------
 //  Morse Coder
-//  Guty PmXa. 6-jun-2020
+//  Guty PmXa. 8-jul-2021
 //-----------------------
 
 int led = 13;
-int unit = 100;
+int unit = 25;
 
 String message = "Feliz cumpleaños Fer Chaka";
 
@@ -12,6 +12,7 @@ void setup(){
     pinMode(led,OUTPUT);
     Serial.begin(9600);
     message.toLowerCase();
+    message += ' ';
 }
 
 void loop(){
