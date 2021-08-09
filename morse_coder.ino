@@ -1,26 +1,23 @@
 //-----------------------
 //  Morse Coder
-//  Guty PmXa. 1-jun-2020
+//  Guty PmXa. 6-jun-2020
 //-----------------------
 
 int led = 13;
-int unit = 250;
+int unit = 100;
 
-char message[] = "feliz cumpleaños fer chaka";
-int numel;
+String message = "Feliz cumpleaños Fer Chaka";
 
 void setup(){
     pinMode(led,OUTPUT);
     Serial.begin(9600);
-    numel = sizeof(message);
-    numel = numel/sizeof(message[0]);
+    message.toLowerCase();
 }
 
 void loop(){
-    for(int i = 0; i < numel; i = i + 1){
+    for(int i = 0; i < message.length(); i++){
         letter_space();
-        //Serial.write(message[i]);
-        //Serial.write(": ");
+        Serial.print(message[i]);
         translate_toMorse(message[i]);
     }
 }
@@ -55,9 +52,9 @@ void word_space(){
     Serial.println();
 }
 
-//----------
-//Dictionary
-//----------
+//---------------------
+//Morse code dictionary
+//---------------------
 
 void translate_toMorse(char letter){
   switch (letter){
