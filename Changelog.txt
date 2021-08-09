@@ -1,5 +1,8 @@
 My Own Real Sketch (MORSke)
 
+Version 0.04
+A dictionary is included as a library to fully translate a message!
+
 Version 0.03
 A simple function is used to translate vowels to morse code.
 
