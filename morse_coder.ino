@@ -8,7 +8,7 @@
 int led = 13;
 int unit = 25;
 
-String message = "Feliz cumpleaños Fer Chaka";
+String message = "morse_coder";
 
 void setup(){
     pinMode(led,OUTPUT);
