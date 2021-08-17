@@ -1,14 +1,16 @@
 //------------------------
 //  Morse Coder
-//  Guty PmXa. 10-jul-2021
+//  Guty PmXa. 16-ago-2021
 //------------------------
 
 #include "dictionary.h"
 
-int led = 13;
-int unit = 25;
+const int led = 13;
+const int unit = 75;
+const int buzzer = 11;
+const int freq = 294; // Equivalent to a D4
 
-String message = "morse_coder";
+String message = "morse coder";
 
 void setup(){
     pinMode(led,OUTPUT);
@@ -19,6 +21,7 @@ void setup(){
 
 void loop(){
     for(int i = 0; i < message.length(); i++){
+        // letter_space should be up here to make the text look aligned
         letter_space();
         Serial.print(message[i]);
         translate_toMorse(message[i]);
