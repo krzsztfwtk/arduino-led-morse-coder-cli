@@ -17,13 +17,15 @@ void setup(){
     Serial.begin(9600);
     message.toLowerCase();
     message += ' ';
-}
 
-void loop(){
+    // Adding the buzzer makes it a little bothersome if it repeats
     for(int i = 0; i < message.length(); i++){
         // letter_space should be up here to make the text look aligned
         letter_space();
         Serial.print(message[i]);
         translate_toMorse(message[i]);
     }
+}
+
+void loop(){
 }

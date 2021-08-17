@@ -1,5 +1,8 @@
 My Own Real Sketch (MORSke)
 
+Version 0.08
+An active buzzer (pin 11) has been added. This makes it so that the message can be heard, as it was the original purpose of morse code in the first place ()^_^
+
 Version 0.07
 The tranlsate_toMorse() function has been put in a separate file. This makes the code easier.
 
