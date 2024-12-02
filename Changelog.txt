@@ -1,5 +1,8 @@
 My Own Real Sketch (MORSke)
 
+Version 0.09
+cli and Polish language
+
 Version 0.08
 An active buzzer (pin 11) has been added. This makes it so that the message can be heard, as it was the original purpose of morse code in the first place ()^_^
 
